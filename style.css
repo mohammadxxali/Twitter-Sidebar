@@ -45,3 +45,49 @@ aside {
                 --icon-fill: var(--c-active);
                 --c-color: var(--c-active);
             }
+
+            .icon {
+                margin-right: 16px;
+                position: relative;
+                svg {
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            & > div {
+                display: inline-flex;
+                padding: 10px 20px 10px 12px;
+                margin: -10px -20px -10px -12px;
+                border-radius: 21px;
+                background: var(--c-background);
+            }
+            &.home {
+                --icon-fill-size: 0px;
+                --icon-house-s: 1;
+                --icon-outline-o: 1;
+                --icon-outline-s: 1;
+                --icon-feather-left-o: 1;
+                --icon-feather-left-s: 0;
+                --icon-feather-left-x: -7px;
+                --icon-feather-left-y: -3.5px;
+                --icon-feather-left-r: 0deg;
+                --icon-feather-right-o: 1;
+                --icon-feather-right-s: 0;
+                --icon-feather-right-x: -7px;
+                --icon-feather-right-y: -3.5px;
+                --icon-feather-right-r: 0deg;
+                &.active {
+                    --icon-outline-o: 0;
+                    --icon-outline-s: .9;
+                    --icon-fill-size: 12px;
+                }
+                .icon {
+                    svg {
+                        &.house {
+                            fill: var(--c-color);
+                            transform: scale(var(--icon-house-s)) translateZ(0);
+                            .fill {
+                                fill: var(--c-active);
+                                clip-path: circle(var(--icon-fill-size) at 50% 50%);
+                            }
