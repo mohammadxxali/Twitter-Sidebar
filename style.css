@@ -156,3 +156,31 @@ aside {
             }
         }
     }
+
+    &.notifications {
+        --icon-r: 0deg;
+        --icon-ring-x: 0px;
+        --icon-bell-fill: var(--c-background);
+        --icon-stroke: 1.5px;
+        &.active {
+            --icon-bell-fill: var(--c-active);
+            --icon-stroke: 2px;
+        }
+        .icon {
+            svg {
+                stroke: currentColor;
+                stroke-linejoin: round;
+                stroke-linecap: round;
+                transform-origin: 50% 10%;
+                transform: rotate(var(--icon-r)) translateZ(0);
+                .bell {
+                    stroke-width: 1.5px;
+                    fill: var(--icon-bell-fill);
+                }
+                .ring {
+                    stroke-width: var(--icon-stroke);
+                    transform: translateX(var(--icon-ring-x));
+                }
+            }
+        }
+    }
