@@ -130,3 +130,29 @@ aside {
           }
         }
       }
+
+
+      &.explore {
+        --icon-r: 0deg;
+        --icon-triangle-fill: var(--c-background);
+        --icon-stroke: 1.5px;
+        &.active {
+            --icon-triangle-fill: var(--c-active);
+            --icon-stroke: 2px;
+        }
+        .icon {
+            transform: rotate(var(--icon-r));
+            svg {
+                stroke: currentColor;
+                stroke-linejoin: round;
+                stroke-linecap: round;
+                .outline {
+                    stroke-width: var(--icon-stroke);
+                }
+                .triangle {
+                    fill: var(--icon-triangle-fill);
+                    stroke-width: 1.5px;
+                }
+            }
+        }
+    }
