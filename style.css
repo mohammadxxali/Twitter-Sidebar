@@ -4,3 +4,16 @@
     --c-active: #1DA1F2;
     --c-hover: #081018;
 }
+
+aside {
+    width: 280px;
+    border-radius: 24px;
+    padding: 40px;
+    background: var(--c-sidebar);
+    .logo {
+        display: block;
+        width: 28px;
+        height: 28px;
+        fill: var(--logo-color, var(--c-default));
+        margin-bottom: 36px;
+    }
