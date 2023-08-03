@@ -17,3 +17,31 @@ aside {
         fill: var(--logo-color, var(--c-default));
         margin-bottom: 36px;
     }
+
+    nav {
+        display: grid;
+        grid-gap: 36px;
+        button {
+            --c-color: var(--c-default);
+            --c-background: var(--c-sidebar);
+            --icon-fill: var(--c-background);
+            -webkit-tap-highlight-color: transparent;
+            -webkit-appearance: none;
+            outline: none;
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 19px;
+            line-height: 24px;
+            font-weight: bold;
+            text-align: left;
+            display: block;
+            cursor: pointer;
+            position: relative;
+            color: var(--c-color);
+            &.active {
+                --icon-fill: var(--c-active);
+                --c-color: var(--c-active);
+            }
