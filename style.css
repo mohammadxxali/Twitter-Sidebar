@@ -235,3 +235,32 @@ aside {
             }
         }
     }
+
+    &.bookmark {
+        --icon-default-y: 0px;
+        --icon-background-y: -17.5px;
+        --icon-corner-fill: var(--c-background);
+        &.active {
+            --icon-corner-fill: var(--c-active);
+        }
+        .icon {
+            svg {
+                stroke: currentColor;
+                stroke-width: 1.5px;
+                stroke-linejoin: round;
+                stroke-linecap: round;
+                .background {
+                    stroke: none;
+                    fill: currentColor;
+                    transform: translateY(var(--icon-background-y));
+                }
+                .corner {
+                    fill: var(--icon-corner-fill);
+                }
+                .default {
+                    transform: translateY(var(--icon-default-y));
+                    fill: var(--icon-fill);
+                }
+            }
+        }
+    }
