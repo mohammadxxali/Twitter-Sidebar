@@ -347,3 +347,46 @@ aside {
           }
         }
       }
+
+      &.profile {
+        --icon-r: 0deg;
+        --icon-eye-r: 90deg;
+        --icon-eye-r-s: 1;
+
+        .icon {
+
+          &:before,
+          &:after {
+            content: '';
+            position: absolute;
+            left: 13px;
+            top: 5px;
+            width: 2px;
+            height: 2px;
+            border-radius: 1px;
+            border-radius: 1px;
+            background: var(--c-background);
+            box-shadow: 4px 0 0 var(--c-background);
+            transform: rotateX(var(--icon-eye-r));
+          }
+
+          &:before {
+            left: 9px;
+            transform: scaleX(var(--icon-eye-r-s)) rotateX(var(--icon-eye-r));
+          }
+
+          svg {
+            fill: var(--icon-fill);
+            stroke: currentColor;
+            stroke-width: 1.5px;
+
+            .head {
+              transform-origin: 12px 9px;
+              transform: rotate(var(--icon-r));
+            }
+          }
+        }
+      }
+    }
+  }
+}
